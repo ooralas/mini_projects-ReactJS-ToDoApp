@@ -92,6 +92,8 @@ input {
   padding: 0 5px;
   transition: 0.4s ease;
   margin-right: 4px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.322);
 }
 input:focus {
   border: none;
@@ -103,15 +105,16 @@ button {
   border: none;
   outline: none;
   margin: 2px;
-  padding: 4px;
+  padding: 5px 7px;
   border-radius: 4px;
   transition: 0.4s ease;
   font-weight: 400;
   font-size: 1em !important;
 }
 button:hover {
-  background-color: rgb(255, 119, 119);
+  background-color: rgba(255, 255, 255, 0.651);
   cursor: pointer;
+  color: black;
 }
 
 span,
