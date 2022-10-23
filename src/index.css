@@ -1,48 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/Montserrat-VariableFont_wght.ttf');
+}
 
-*,*::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: rgb(224, 224, 224);
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-body, input, button {
+body,
+input,
+button {
   font-family: 'Montserrat', sans-serif;
 }
 
 .App {
-    position: absolute;
-    padding:10px 16px;
-    background-color: rgb(149, 209, 201);
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 10px 16px;
+  background-color: rgb(149, 209, 201);
+  border-radius: 10px;
+
+  min-width: 500px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
+@media screen and (max-width: 425px) {
+  .App {
+    min-width: unset;
+  }
+}
+@media screen and (max-width: 375px) {
+  .listEntry-container {
+    flex-direction: column;
+  }
+}
+
 h2 {
   font-weight: 400;
+  font-size: 2.5rem;
 }
-.list-container, .lists-entry {
+.list-container,
+.lists-entry {
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.newEntry-container{
+.newEntry-container {
   margin-bottom: 20px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(128, 128, 128, 0.294);
 }
-.newEntry-container, .listEntry-container , .lists-entry {
+.newEntry-container,
+.listEntry-container,
+.lists-entry {
   width: 100%;
 }
 
-.newEntry-container form, .listEntry-container, .listEntry-container form{
+.newEntry-container form,
+.listEntry-container,
+.listEntry-container form {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -61,21 +90,22 @@ input {
   border-radius: 4px;
   flex: 1;
   padding: 0 5px;
-  transition: .4s ease;
+  transition: 0.4s ease;
   margin-right: 4px;
 }
 input:focus {
   border: none;
   outline: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 button {
-  border:none;
+  border: none;
   outline: none;
   margin: 2px;
   padding: 4px;
   border-radius: 4px;
-  transition: .4s ease;
+  transition: 0.4s ease;
   font-weight: 400;
   font-size: 1em !important;
 }
@@ -84,6 +114,8 @@ button:hover {
   cursor: pointer;
 }
 
-span, button, input {
+span,
+button,
+input {
   font-size: 1.2em;
 }
